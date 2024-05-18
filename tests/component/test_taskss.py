@@ -38,6 +38,6 @@ def test_get_task_by_id():
 def test_delete_task():
     delete_response = requests.delete(f"{delete_task_url}/99")
     assert delete_response.status_code == 200
-    response = requests.get(f"{get_task_by_id_url}/1")
+    response = requests.get(f"{get_task_by_id_url}/99")
     assert response.status_code == 404
 

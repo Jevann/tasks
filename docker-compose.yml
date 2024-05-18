@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  tasks_service:
+    restart: on-failure
+    container_name: tasks_service
+    build: tasks_service/
+    ports:
+      - "8000:80"
+
+  bored_service:
+    restart: on-failure
+    container_name: bored_service
+    build: bored_service/
+    ports:
+      - "8001:80"

@@ -40,3 +40,4 @@ def test_delete_task():
     assert delete_response.status_code == 200
     response = requests.get(f"{get_task_by_id_url}/1")
     assert response.status_code == 404
+
